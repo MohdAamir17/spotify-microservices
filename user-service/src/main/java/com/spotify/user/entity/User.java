@@ -4,6 +4,7 @@ package com.spotify.user.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
@@ -11,7 +12,8 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User extends BaseEntity implements Serializable {
+
     @Id
     @GeneratedValue
     private UUID id;
